@@ -1,3 +1,2 @@
-from = /api
-to = https://classicsblogapi.herokuapp.com/
-status = 200
+from = "/api"
+to = "https://classicsblogapi.herokuapp.com/"
