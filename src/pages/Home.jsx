@@ -15,7 +15,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try{
-        const res = await axios.get(`https://classicsblogapi.herokuapp.com/posts${cat}`)
+        const res = await axios.get(`https://classicsblogapi.herokuapp.com/api/posts${cat}`)
           if(cat === ""){
             res.data.reverse();
             res.data = res.data.slice(0,5);
