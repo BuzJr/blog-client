@@ -1,1 +1,3 @@
-/api/* https://classicsblogapi.herokuapp.com/:splat 200
+from: /api
+to: https://classicsblogapi.herokuapp.com/
+status = 200
