@@ -22,7 +22,7 @@ const Single = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`https://classicsblogapi.herokuapp.com/posts/${postId}`);
+        const res = await axios.get(`https://classicsblogapi.herokuapp.com/api/posts/${postId}`);
         setPost(res.data);
       } catch (err) {
         console.log(err);
