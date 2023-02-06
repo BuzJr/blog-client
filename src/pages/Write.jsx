@@ -18,7 +18,7 @@ const Write = () => {
 
   const { currentUser } = useContext(AuthContext)
 
-  /*const upload = async () => {
+  const upload = async () => {
     try {
       const formData = new FormData();
       formData.append("file", file);
@@ -26,11 +26,11 @@ const Write = () => {
     } catch (err) {
       console.log(err);
     }
-  };*/
+  };
 
   const handleClick = async (e) => {
     e.preventDefault();
-    //const imgUrl = await upload();
+    const imgUrl = await upload();
 
     try {
       state? await axios.put(`https://classicsblogapi.herokuapp.com/api/posts/${state.id}`, {
@@ -39,7 +39,7 @@ const Write = () => {
             desc: desc,
             text: text,
             cat,
-            //img: file ? imgUrl : "",
+            img: file ? imgUrl : "",
           })
         : await axios.post(`https://classicsblogapi.herokuapp.com/api/posts/`, {
             withCredentials: true,
@@ -47,7 +47,7 @@ const Write = () => {
             desc: desc,
             text: text,
             cat,
-           // img: file ? imgUrl : "",
+            img: file ? imgUrl : "",
             date: moment(Date.now()).format("YYYY-MM-DD HH:mm:ss"),
           });
           navigate("/")
