@@ -34,14 +34,14 @@ const Write = () => {
     const imgUrl = await upload();
 
     try {
-      state? await axios.put(`/posts/${state.id}`, {
+      state? await axios.put(`https://classicsblogapi.herokuapp.com/posts/${state.id}`, {
             title,
             desc: desc,
             text: text,
             cat,
             img: file ? imgUrl : "",
           })
-        : await axios.post(`/posts/`, {
+        : await axios.post(`https://classicsblogapi.herokuapp.com/posts/`, {
             title,
             desc: desc,
             text: text,
