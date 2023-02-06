@@ -38,14 +38,14 @@ const Write = () => {
             desc: desc,
             text: text,
             cat,
-            img,
+            //img: file ? imgUrl : "",
           })
         : await axios.post(`https://classicsblogapi.herokuapp.com/api/posts/`, {
             title,
             desc: desc,
             text: text,
             cat,
-            img,
+           // img: file ? imgUrl : "",
             date: moment(Date.now()).format("YYYY-MM-DD HH:mm:ss"),
           });
           navigate("/")
