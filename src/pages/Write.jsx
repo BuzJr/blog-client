@@ -22,8 +22,7 @@ const Write = () => {
     try {
       const formData = new FormData();
       formData.append("file", file);
-      const res = await axios.post("https://classicsblogapi.herokuapp.com/api/upload", formData);
-      return res.data;
+      await axios.post("https://classicsblogapi.herokuapp.com/api/upload", formData);
     } catch (err) {
       console.log(err);
     }
@@ -34,14 +33,14 @@ const Write = () => {
     const imgUrl = await upload();
 
     try {
-      state? await axios.put(`https://classicsblogapi.herokuapp.com/posts/${state.id}`, {
+      state? await axios.put(`https://classicsblogapi.herokuapp.com/api/posts/${state.id}`, {
             title,
             desc: desc,
             text: text,
             cat,
             img: file ? imgUrl : "",
           })
-        : await axios.post(`https://classicsblogapi.herokuapp.com/posts/`, {
+        : await axios.post(`https://classicsblogapi.herokuapp.com/api/posts/`, {
             title,
             desc: desc,
             text: text,
