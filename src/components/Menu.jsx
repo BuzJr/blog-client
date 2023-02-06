@@ -14,7 +14,7 @@ const Menu = ({cat}) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`/posts/?cat=${cat}`);
+        const res = await axios.get(`https://classicsblogapi.herokuapp.com/api/posts/?cat=${cat}`);
         res.data.reverse();
         setPosts(res.data);
       } catch (err) {
