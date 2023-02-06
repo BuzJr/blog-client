@@ -45,7 +45,7 @@ const Write = () => {
             desc: desc,
             text: text,
             cat,
-            img: file ? imgUrl : "",
+            img,
             date: moment(Date.now()).format("YYYY-MM-DD HH:mm:ss"),
           });
           navigate("/")
