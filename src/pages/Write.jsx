@@ -38,7 +38,7 @@ const Write = () => {
             desc: desc,
             text: text,
             cat,
-            img: file ? imgUrl : "",
+            img,
           })
         : await axios.post(`https://classicsblogapi.herokuapp.com/api/posts/`, {
             title,
