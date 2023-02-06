@@ -33,7 +33,7 @@ const Single = () => {
 
   const handleDelete = async ()=>{
     try {
-      await axios.delete(`https://classicsblogapi.herokuapp.com/posts/${postId}`);
+      await axios.delete(`https://classicsblogapi.herokuapp.com/api/posts/${postId}`);
       navigate("/")
     } catch (err) {
       console.log(err);
