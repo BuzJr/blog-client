@@ -94,7 +94,7 @@ const Write = () => {
               <b>Visibility: </b> Public
             </span>
             <input
-              style={{ display: "none" }} type="file" id="file" name="" onChange={(e) => setFile(e.target.files[0])}
+              style={{ display: "none" }} type="file" id="file" name="file" formEncType="multipart/form-data" onChange={(e) => setFile(e.target.files[0])}
             />
             <label className="file" htmlFor="file">
               Upload Image
