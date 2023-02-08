@@ -11,7 +11,7 @@ const Write = () => {
   const [desc, setDesc] = useState(state?.desc || "");
   const [text, setText] = useState(state?.text || "");
   const [title, setTitle] = useState(state?.title || "");
-  const [file, setFile] = useState(state?.img || null);
+  const [file, setFile] = useState(null);
   const [cat, setCat] = useState(state?.cat || "");
 
   const navigate = useNavigate()
@@ -30,8 +30,9 @@ const Write = () => {
 
   const handleClick = async (e) => {
     e.preventDefault();
+    console.log(file)
     const imgUrl = await upload();
-
+    console.log(imgUrl)
     try {
       state? await axios.put(`https://classicsblogapi.herokuapp.com/api/posts/${state.id}`, {
             withCredentials: true,
@@ -39,7 +40,7 @@ const Write = () => {
             desc: desc,
             text: text,
             cat,
-            img: imgUrl
+            img: file ? imgUrl : "",
           })
         : await axios.post(`https://classicsblogapi.herokuapp.com/api/posts/`, {
             withCredentials: true,
@@ -47,7 +48,7 @@ const Write = () => {
             desc: desc,
             text: text,
             cat,
-            img: imgUrl,
+            img: file ? imgUrl : "",
             date: moment(Date.now()).format("YYYY-MM-DD HH:mm:ss"),
           });
           navigate("/")
@@ -94,7 +95,7 @@ const Write = () => {
               <b>Visibility: </b> Public
             </span>
             <input
-              style={{ display: "none" }} type="file" id="file" name="file" formEncType="multipart/form-data" onChange={(e) => setFile(e.target.files[0])}
+              style={{ display: "none" }} type="file" id="file" name="" onChange={(e) => setFile(e.target.files[0])}
             />
             <label className="file" htmlFor="file">
               Upload Image
