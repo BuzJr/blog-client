@@ -11,7 +11,7 @@ const Write = () => {
   const [desc, setDesc] = useState(state?.desc || "");
   const [text, setText] = useState(state?.text || "");
   const [title, setTitle] = useState(state?.title || "");
-  const [file, setFile] = useState(null);
+  const [file, setFile] = useState(state?.img || null);
   const [cat, setCat] = useState(state?.cat || "");
 
   const navigate = useNavigate()
@@ -39,7 +39,7 @@ const Write = () => {
             desc: desc,
             text: text,
             cat,
-            img: file ? imgUrl : "",
+            img: imgUrl
           })
         : await axios.post(`https://classicsblogapi.herokuapp.com/api/posts/`, {
             withCredentials: true,
@@ -47,7 +47,7 @@ const Write = () => {
             desc: desc,
             text: text,
             cat,
-            img: file ? imgUrl : "",
+            img: imgUrl,
             date: moment(Date.now()).format("YYYY-MM-DD HH:mm:ss"),
           });
           navigate("/")
