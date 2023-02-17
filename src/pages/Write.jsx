@@ -22,7 +22,7 @@ const Write = () => {
     try {
       const formData = new FormData();
       formData.append("file", file);
-      await axios.post("/api/upload", formData);
+      await axios.post("https://classicsblogapi.herokuapp.com/api/upload", formData);
     } catch (err) {
       console.log(err);
     }
