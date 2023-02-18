@@ -31,7 +31,7 @@ const Write = () => {
   const handleClick = async (e) => {
     e.preventDefault();
     const imgUrl = await upload();
-    console.log(imgUrl)
+    console.log("ImgUrl: ",imgUrl)
     try {
       state? await axios.put(`https://classicsblogapi.herokuapp.com/api/posts/${state.id}`, {
             withCredentials: true,
