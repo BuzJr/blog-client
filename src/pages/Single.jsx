@@ -48,7 +48,7 @@ const Single = () => {
   return (
     <div className="single">
       <div className="content">
-        <img src={`https://classicsblogapi.herokuapp.com/api/upload/${post?.img}`} alt="" />
+        <img src={`${post?.img}`} alt="" />
         <div className="user">
           {post.userImg && <img
             src={post.userImg}
