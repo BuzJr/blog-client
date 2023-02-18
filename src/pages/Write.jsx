@@ -30,7 +30,6 @@ const Write = () => {
 
   const handleClick = async (e) => {
     e.preventDefault();
-    console.log(file)
     const imgUrl = await upload();
     console.log(imgUrl)
     try {
