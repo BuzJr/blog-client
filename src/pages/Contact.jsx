@@ -12,7 +12,9 @@ const Contact = () => {
      <body className='portfolio'>
         <h1>Check Out My Portfolio</h1>
         <button>
+        <a href='https://nathan-pawlas.github.io/portfolio/' target="_blank">
         <Link className='link'>Portfolio Site</Link>
+        </a>
         </button>
      </body>
     </div>

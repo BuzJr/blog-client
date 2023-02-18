@@ -42,7 +42,9 @@ const Home = () => {
             the deep end and create my very own full-stack website in order to absorb as much knowledge as possible. A real trial by fire.
             You can find my portfolio here: </p>
             <div className='button_about'>
+            <a href='https://nathan-pawlas.github.io/portfolio/' target="_blank">
             <button>PORTFOLIO SITE</button>
+            </a>
             </div>
         <p>
             This website was created primarily in Java Script using the React Library with html and scss to help flesh it out. The back end
