@@ -17,7 +17,8 @@ const Write = () => {
   const navigate = useNavigate()
 
   const { currentUser } = useContext(AuthContext)
-
+  
+  /*
   const upload = async () => {
     try {
       const formData = new FormData();
@@ -27,6 +28,7 @@ const Write = () => {
       console.log(err);
     }
   };
+  */
 
   const handleClick = async (e) => {
     e.preventDefault();
