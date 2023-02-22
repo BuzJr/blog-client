@@ -48,8 +48,9 @@ const Home = () => {
             </div>
         <p>
             This website was created primarily in Java Script using the React Library with html and scss to help flesh it out. The back end
-            was created in mySQL in order to keep track of posts, user authentification, and comments. This allows for easy post creation 
-            in a custom built page for writing new posts, as well as easy user tracking and the ability to send update emails to users that register. 
+            was also created in Java Script and utilizes mySQL in order to keep track of posts, user authentification, allow for eamil listings, and 
+             (when I find the time) comments. My api and database run on a server hosted by Heroku (Using the cheapest option so forgive any server instabilities) 
+             and images are stored seperately using Cloudinary (image url's are stored on heroku).
         </p>
         <div className='button_about'>
         <a href='https://github.com/Nathan-Pawlas/classics_blog' target="_blank">
