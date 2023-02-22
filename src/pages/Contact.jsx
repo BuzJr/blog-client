@@ -13,7 +13,7 @@ const Contact = () => {
         <h1>Check Out My Portfolio</h1>
         <button>
         <a href='https://nathan-pawlas.github.io/portfolio/' target="_blank">
-        <Link className='link'>Portfolio Site</Link>
+        <button className='link'>Portfolio Site</button>
         </a>
         </button>
      </body>
