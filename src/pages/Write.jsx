@@ -36,7 +36,6 @@ const Write = () => {
    // console.log("ImgUrl: ",imgUrl)
     try {
       state? await axios.put(`https://classicsblogapi.herokuapp.com/api/posts/${state.id}`, {
-            withCredentials: true,
             title,
             desc: desc,
             text: text,
@@ -44,7 +43,6 @@ const Write = () => {
             //img: file ? imgUrl : "",
           })
         : await axios.post(`https://classicsblogapi.herokuapp.com/api/posts/`, {
-            withCredentials: true,
             title,
             desc: desc,
             text: text,
