@@ -3,6 +3,8 @@
     --clr-secondary: #D7C0D0;
     --clr-primary: #413869;
     --clr-background: #272133;
+
+    background-color: #272133;
 }
 
 .app {
@@ -163,7 +165,6 @@
 
         //HOME
         .home {
-            background-color: var(--clr-background);
             .posts {
               margin-top: 50px;
               display: flex;
