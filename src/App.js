@@ -17,9 +17,10 @@ import "./style.scss";
 const Layout = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <Outlet />
-      <Footer />
+      <Footer /> */}
+      Temporarily Down, Being Rebuilt
     </>
   );
 };
