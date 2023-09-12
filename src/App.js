@@ -17,10 +17,9 @@ import "./style.scss";
 const Layout = () => {
   return (
     <>
-      {/* <Navbar />
+      <Navbar />
       <Outlet />
-      <Footer /> */}
-      Temporarily Down, Being Rebuilt
+      <Footer />
     </>
   );
 };
@@ -66,7 +65,8 @@ function App() {
   return (
     <div className="app">
       <div className="container">
-        <RouterProvider router={router} />
+        Temporarily Down. In The Process of Rebuilding This Site
+        {/* <RouterProvider router={router} /> */}
       </div>
     </div>
   );
